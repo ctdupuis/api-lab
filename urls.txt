@@ -46,7 +46,7 @@ List the possible response codes from the GET request at /posts/filter
 -200, 409
 
 Create a post whose text is your name, record the URL and body here:
--POST https://practiceapi.devmountain.com/api/posts body { "text": "Cody Dupuis" }
+-POST https://practiceapi.devmountain.com/api/posts body = { "text": "Cody Dupuis" }
 https://practiceapi.devmountain.com/api/posts/filter?text=Cody%20Dupuis to find my post id { id: 134 }
 
 What would the URL and body object be to update the post you just made to contain your faovrite color instead of your name?

@@ -1,0 +1,8 @@
+.wrapper {
+    padding: 2%
+}
+
+.flex-cont {
+    display: flex;
+    flex-wrap: wrap;
+}
