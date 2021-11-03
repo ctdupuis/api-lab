@@ -1,8 +1,76 @@
+:root {
+    --yel: #FFE81F;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Play', sans-serif;
+}
+
 .wrapper {
     padding: 2%
 }
 
 .flex-cont {
     display: flex;
-    flex-wrap: wrap;
+}
+
+.centered {
+    align-items: center;
+    justify-content: center;
+}
+
+.col {
+    flex-direction: column;
+}
+
+.profile-card {
+    margin: 2%;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px var(--yel);
+    width: 20%;
+    color: var(--yel);
+}
+
+.profile-card:hover {
+    box-shadow: 10px 10px 20px var(--yel);
+}
+
+.profile-card span {
+    margin: 1%;
+}
+
+.name {
+    margin: 2%;
+    align-self: center;
+}
+
+.spaced-top {
+    margin: 2% 0;
+}
+
+#get-res {
+    background-color: black;
+    outline: none;
+    padding: 1%;
+    border-radius: 10px;
+    font-variant-caps: petite-caps;
+    color: var(--yel);
+    font-size: larger;
+    font-family: 'Play', sans-serif;
+}
+
+#get-res:hover {
+    background-color: var(--yel);
+    color: black;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.spaced {
+    justify-content: space-evenly;
 }

@@ -20,13 +20,23 @@ renderData = data => {
     const target = document.getElementById("target");
     let html = 
     `
-        <div class="profile-card">
+        <div class="profile-card flex-cont spaced col">
             <h2 class="name">${name}</h2>
-            <h4 class="gender">Gender: ${gender}</h4>
-            <span class="hair-color">Hair color: ${hair_color}</span>
-            <span class="height">Height in cm: ${height}</span>
-            <span class="mass">Mass in kg: ${mass}</span>
-            <span class="skin-color">${skin_color}</span>
+            <div class="flex-cont spaced spaced-top">
+                <h4>Gender:</h4><h4> ${gender}</h4>
+            </div>
+            <div class="flex-cont spaced spaced-top">
+                <div class="spaced-top">Hair color: </div><div class="spaced-top">${hair_color}</div>
+            </div>
+            <div class="flex-cont spaced spaced-top">
+                <div class="spaced-top">Height in cm: </div><div class="spaced-top">${height}</div>
+            </div>
+            <div class="flex-cont spaced spaced-top">
+                <div class="spaced-top">Mass in kg: </div><div class="spaced-top">${mass}</div>
+            </div>
+            <div class="flex-cont spaced spaced-top">
+                <div class="spaced-top"> Skin color: </div><div class="spaced-top">${skin_color}</div>
+            </div>
         </div>
     `
     target.innerHTML += html;
