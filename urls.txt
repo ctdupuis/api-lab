@@ -1,0 +1,67 @@
+PART 1
+
+The height of Darth Vader => 202
+http://swapi.dev/api/people/4 
+
+
+The population of planet Alderaan => 2000000000
+http://swapi.dev/api/planets/2
+
+The name of the manufacturer of the Millennium Falcon => Corellian Engineering Corporation
+http://swapi.dev/api/starships/10
+
+
+The name of the species that C-3PO belongs to (multiple URLs) => Droid
+C-3P0 url: http://swapi.dev/api/people/2
+Species url: http://swapi.dev/api/species/2/
+
+
+The title of each film that Obi-Wan Kenobi is in (multiple URLs) => Episodes 1-6
+Obi-Wan url: http://swapi.dev/api/people/10
+Film urls: http://swapi.dev/api/films/1
+http://swapi.dev/api/films/2
+http://swapi.dev/api/films/3
+http://swapi.dev/api/films/4
+http://swapi.dev/api/films/5
+http://swapi.dev/api/films/6
+
+
+Use the search query to get the information about the Millennium Falcon
+url: http://swapi.dev/api/starships/?search=millennium
+
+
+
+PART 2
+
+Check if the POST request accept params, queries, and/or a body. Which one(s) and what information is it expecting to be sent?
+-The POST request seems to accept a body object with a key of "text" that points to the text of the post in the request.
+
+What data type does the GET request return?
+-An array of all the posts
+
+What would the URL look like for deleting the post with the id 555? (This post does not exist anymore, but the syntax is the same for existing posts)
+-DELETE https://practiceapi.devmountain.com/api/posts?id=555
+
+List the possible response codes from the GET request at /posts/filter
+-200, 409
+
+Create a post whose text is your name, record the URL and body here:
+-POST https://practiceapi.devmountain.com/api/posts body { "text": "Cody Dupuis" }
+https://practiceapi.devmountain.com/api/posts/filter?text=Cody%20Dupuis to find my post id { id: 134 }
+
+What would the URL and body object be to update the post you just made to contain your faovrite color instead of your name?
+-PUT https://practiceapi.devmountain.com/api/posts?id=134 body { "text": "My favorite color is red" }
+
+What is the URL to get posts that contain the text “blue”?
+-GET https://practiceapi.devmountain.com/api/posts/filter?text=blue
+
+Make a request to GET all the posts. What are the content type and charset of the response? (Hint: look on the Headers)
+-GET https://practiceapi.devmountain.com/api/posts
+-Content-Type: application/json
+-Charset: utf-8
+
+What would cause a PUT request to return a 409 status?
+-Request was missing req.query.id or req.body.text
+
+What happens if you try to send a query in the GET request URL? Why do you get that response?
+-You still end up getting all of the posts. The API accounts for /filter to be in the URL when trying to send a query
